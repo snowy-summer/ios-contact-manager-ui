@@ -161,6 +161,7 @@
                             <constraint firstItem="ApC-wC-kiR" firstAttribute="trailing" secondItem="k1V-dW-Es5" secondAttribute="trailing" constant="20" id="ziO-2x-3LI"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="연락처 편집" id="ysg-qH-jZl">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ODf-uB-JUz">
                             <connections>
@@ -168,6 +169,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ageTextFeild" destination="tUL-li-ReH" id="4BG-cF-GqC"/>
+                        <outlet property="nameTextField" destination="f6C-Yr-yiJ" id="GbJ-LT-yKt"/>
+                        <outlet property="phoneNumberTextField" destination="iRm-9l-wLI" id="4or-Py-efk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLj-bT-iQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
