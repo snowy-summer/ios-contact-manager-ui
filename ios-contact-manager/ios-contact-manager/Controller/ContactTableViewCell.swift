@@ -8,7 +8,9 @@
 import UIKit
 
 class ContactTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var subTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

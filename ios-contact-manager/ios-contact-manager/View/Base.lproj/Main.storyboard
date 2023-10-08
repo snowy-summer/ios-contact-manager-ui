@@ -59,6 +59,10 @@
                                     <accessibilityTraits key="traits" none="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
+                                <connections>
+                                    <outlet property="subTitle" destination="gSc-ey-j9e" id="W96-YH-RCj"/>
+                                    <outlet property="title" destination="uN6-qb-Kp5" id="Oys-0R-fIs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -99,7 +103,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6C-Yr-yiJ">
                                         <rect key="frame" x="109" y="0.0" width="244" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -118,7 +122,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tUL-li-ReH">
                                         <rect key="frame" x="109" y="0.0" width="244" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -137,7 +141,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iRm-9l-wLI">
                                         <rect key="frame" x="109" y="0.0" width="244" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" smartDashesType="yes" textContentType="tel"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -163,11 +167,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="연락처 편집" id="ysg-qH-jZl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ODf-uB-JUz">
-                            <connections>
-                                <action selector="touchSaveBarButtonWithSender:" destination="0qa-Vi-03l" id="dnf-NJ-lxD"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ODf-uB-JUz"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

@@ -25,6 +25,9 @@ final class EditViewController: UIViewController {
         ageTextFeild.placeholder = "나이를 입력해주세요."
         phoneNumberTextField.placeholder = "전화번호를 입력해주세요."
         
+        ageTextFeild.keyboardType = .numberPad
+        phoneNumberTextField.keyboardType = .phonePad
+        
         if let contact = contact {
             nameTextField.text = contact.name
             ageTextFeild.text = "\(contact.age)"

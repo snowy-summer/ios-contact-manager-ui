@@ -23,10 +23,8 @@ final class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as? ContactTableViewCell else { return UITableViewCell() }
         let contact = self.contactsModel.readContact(indexPath: indexPath)
-        var content = cell.defaultContentConfiguration()
-        content.text = "\(contact.name)(\(contact.age))"
-        content.secondaryText = "\(contact.phoneNumber)"
-        cell.contentConfiguration = content
+        cell.title.text = "\(contact.name)(\(contact.age))"
+        cell.subTitle.text = "\(contact.phoneNumber)"
         
         return cell
     }
