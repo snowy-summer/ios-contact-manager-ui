@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041655332AD2886100A6F758 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041655322AD2886100A6F758 /* String.swift */; };
+		0435416D2AD2D66B009F9B8A /* UITableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435416C2AD2D66B009F9B8A /* UITableViewCellConfigurable.swift */; };
 		047A79462AD18FDA005729E2 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A79452AD18FDA005729E2 /* DeveloperPreview.swift */; };
 		04C21E8A2ACD744D00FD476E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C21E892ACD744D00FD476E /* AppDelegate.swift */; };
 		04C21E8C2ACD744D00FD476E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C21E8B2ACD744D00FD476E /* SceneDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041655322AD2886100A6F758 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		0435416C2AD2D66B009F9B8A /* UITableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellConfigurable.swift; sourceTree = "<group>"; };
 		047A79452AD18FDA005729E2 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		04C21E862ACD744D00FD476E /* ios-contact-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-contact-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C21E892ACD744D00FD476E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041655312AD2885200A6F758 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				041655322AD2886100A6F758 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0435416B2AD2D644009F9B8A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0435416C2AD2D66B009F9B8A /* UITableViewCellConfigurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		04C21E7D2ACD744D00FD476E = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +87,8 @@
 				6BEE0C692ACE461100B8BCBE /* Controller */,
 				6BEE0C682ACE460600B8BCBE /* View */,
 				04C21E9F2ACD74E000FD476E /* Models */,
+				041655312AD2885200A6F758 /* Extensions */,
+				0435416B2AD2D644009F9B8A /* Protocols */,
 				04C21E972ACD744E00FD476E /* Info.plist */,
 				04C21E922ACD744E00FD476E /* Assets.xcassets */,
 			);
@@ -180,6 +202,8 @@
 				04E10D202ACECC2E0037D2B5 /* ContactTableViewCell.swift in Sources */,
 				04C21E8C2ACD744D00FD476E /* SceneDelegate.swift in Sources */,
 				04C21E9E2ACD74C400FD476E /* TableViewController.swift in Sources */,
+				0435416D2AD2D66B009F9B8A /* UITableViewCellConfigurable.swift in Sources */,
+				041655332AD2886100A6F758 /* String.swift in Sources */,
 				047A79462AD18FDA005729E2 /* DeveloperPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

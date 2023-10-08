@@ -1,15 +1,10 @@
 import UIKit
 
 final class TableViewController: UITableViewController {
-    private var contactsModel: ContactsModel!
+    private let contactsModel = ContactsModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
-    }
-    
-    private func configure() {
-        self.contactsModel = ContactsModel()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -21,10 +16,9 @@ final class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as? ContactTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as? ContactTableViewCell else { return ContactTableViewCell() }
         let contact = self.contactsModel.readContact(indexPath: indexPath)
-        cell.title.text = "\(contact.name)(\(contact.age))"
-        cell.subTitle.text = "\(contact.phoneNumber)"
+        cell.configureCell(item: contact)
         
         return cell
     }

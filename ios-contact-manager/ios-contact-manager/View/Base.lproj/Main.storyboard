@@ -60,8 +60,8 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <connections>
-                                    <outlet property="subTitle" destination="gSc-ey-j9e" id="W96-YH-RCj"/>
-                                    <outlet property="title" destination="uN6-qb-Kp5" id="Oys-0R-fIs"/>
+                                    <outlet property="subTitle" destination="gSc-ey-j9e" id="nrr-2a-KLB"/>
+                                    <outlet property="title" destination="uN6-qb-Kp5" id="DXa-we-bUn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

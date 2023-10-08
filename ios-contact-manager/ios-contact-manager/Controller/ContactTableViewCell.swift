@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ContactTableViewCell: UITableViewCell {
+final class ContactTableViewCell: UITableViewCell, UITableViewCellConfigurable {
+    typealias T = Contact
+    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subTitle: UILabel!
     
@@ -18,5 +20,9 @@ class ContactTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
+    func configureCell(item contact: Contact) {
+        self.title.text = "\(contact.name)(\(contact.age))"
+        self.subTitle.text = "\(contact.phoneNumber)".formatted(.phoneNumber)
+    }
 }
