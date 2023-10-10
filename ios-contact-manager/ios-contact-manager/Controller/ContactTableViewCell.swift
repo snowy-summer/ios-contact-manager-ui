@@ -23,6 +23,10 @@ final class ContactTableViewCell: UITableViewCell, UITableViewCellConfigurable {
     
     func configureCell(item contact: Contact) {
         self.title.text = "\(contact.name)(\(contact.age))"
+        self.title.font = UIFont.preferredFont(forTextStyle: .headline)
+        self.title.adjustsFontForContentSizeCategory = true
         self.subTitle.text = "\(contact.phoneNumber)".formatted(.phoneNumber)
+        self.subTitle.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        self.subTitle.adjustsFontForContentSizeCategory = true
     }
 }

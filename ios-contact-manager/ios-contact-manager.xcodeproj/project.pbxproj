@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		041655332AD2886100A6F758 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041655322AD2886100A6F758 /* String.swift */; };
 		0435416D2AD2D66B009F9B8A /* UITableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435416C2AD2D66B009F9B8A /* UITableViewCellConfigurable.swift */; };
+		046719DF2AD4D47600F0BBBA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046719DE2AD4D47600F0BBBA /* Contact.swift */; };
 		047A79462AD18FDA005729E2 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A79452AD18FDA005729E2 /* DeveloperPreview.swift */; };
 		04C21E8A2ACD744D00FD476E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C21E892ACD744D00FD476E /* AppDelegate.swift */; };
 		04C21E8C2ACD744D00FD476E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C21E8B2ACD744D00FD476E /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		041655322AD2886100A6F758 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		0435416C2AD2D66B009F9B8A /* UITableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellConfigurable.swift; sourceTree = "<group>"; };
+		046719DE2AD4D47600F0BBBA /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		047A79452AD18FDA005729E2 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		04C21E862ACD744D00FD476E /* ios-contact-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-contact-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C21E892ACD744D00FD476E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		04C21E9F2ACD74E000FD476E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				046719DE2AD4D47600F0BBBA /* Contact.swift */,
 				04C21EA02ACD74F300FD476E /* ContactsModel.swift */,
 				047A79452AD18FDA005729E2 /* DeveloperPreview.swift */,
 			);
@@ -198,6 +201,7 @@
 			files = (
 				04C21EA12ACD74F300FD476E /* ContactsModel.swift in Sources */,
 				04C21E8E2ACD744D00FD476E /* EditViewController.swift in Sources */,
+				046719DF2AD4D47600F0BBBA /* Contact.swift in Sources */,
 				04C21E8A2ACD744D00FD476E /* AppDelegate.swift in Sources */,
 				04E10D202ACECC2E0037D2B5 /* ContactTableViewCell.swift in Sources */,
 				04C21E8C2ACD744D00FD476E /* SceneDelegate.swift in Sources */,

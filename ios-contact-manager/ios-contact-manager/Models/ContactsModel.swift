@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct Contact {
-    let name: String
-    let age: Int
-    let phoneNumber: Int
-}
-
 final class ContactsModel {
     private var contactsList: [Contact] = DeveloperPreview.instance.mockContacts
     
