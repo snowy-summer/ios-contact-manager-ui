@@ -2,22 +2,23 @@ import UIKit
 
 final class ContactListViewController: UITableViewController {
     private let contactsModel: ContactsModel = ContactsModel()
-    private var filteredContactList: [Contact] = []
 
     var isFiltering: Bool {
         let searchController = self.navigationItem.searchController
-        
         guard let isActive = searchController?.isActive else { return false }
         let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
-        
         return isActive && isSearchBarHasText
+    }
+    
+    var searchingText: String {
+        guard let  text = self.navigationItem.searchController?.searchBar.text else { return "" }
+        return text
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addObserver()
         configureSearchController()
-        
     }
     
     
@@ -26,14 +27,16 @@ final class ContactListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.isFiltering ? self.filteredContactList.count : self.contactsModel.count
+        let filteredContactList = self.contactsModel.filteredContactsList(searchingText)
+        return self.isFiltering ? filteredContactList.count : self.contactsModel.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as? ContactTableViewCell else { return UITableViewCell() }
         
         if self.isFiltering {
-            let contact = self.filteredContactList[indexPath.row]
+            let filteredContactsList = contactsModel.filteredContactsList(searchingText)
+            let contact = filteredContactsList[indexPath.row]
             cell.configureCell(item: contact)
         } else {
             let contact = self.contactsModel.readContact(index: indexPath.row)
@@ -104,28 +107,17 @@ extension ContactListViewController {
 }
 
 extension ContactListViewController: UISearchResultsUpdating, UISearchControllerDelegate {
-    
     func updateSearchResults(for searchController: UISearchController) {
-        
-        guard let text = searchController.searchBar.text?.lowercased() else { return }
-        
-        self.filteredContactList = self.contactsModel.readContactList().filter { $0.name.localizedCaseInsensitiveContains(text) }
-        
-            self.tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     
     func configureSearchController() {
-        
         let searchController = UISearchController(searchResultsController: nil)
-        
         searchController.searchBar.placeholder = "이름 검색"
         searchController.searchResultsUpdater = self
-        
         searchController.obscuresBackgroundDuringPresentation = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        
         self.navigationItem.searchController = searchController
-        
     }
 }

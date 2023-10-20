@@ -6,6 +6,10 @@ final class ContactsModel {
             self.notifyContactsDidChange()
         }
     }
+    
+    var filteredContactsList: (_ name: String) -> [Contact] {
+        self.filterContact
+    }
 
     var count: Int {
         self.contactsList.count
@@ -15,11 +19,8 @@ final class ContactsModel {
 // MARK: CRUD Methods
 extension ContactsModel {
     func createContact(contact: Contact) {
+        let contact = Contact(name: contact.name, age: contact.age, phoneNumber: contact.phoneNumber, index: self.contactsList.endIndex - 1)
         self.contactsList.append(contact)
-    }
-    
-    func  readContactList() -> [Contact] {
-        return contactsList
     }
     
     func readContact(index: Int) -> Contact {
@@ -31,8 +32,17 @@ extension ContactsModel {
         self.contactsList[index] = contact
     }
     
+    func deleteContact(contact: Contact) {
+        guard let index = contact.index else { return }
+        self.contactsList.remove(at: index)
+    }
+    
     func deleteContact(index: Int) {
         self.contactsList.remove(at: index)
+    }
+    
+    private func filterContact(by name: String) -> [Contact] {
+        return self.contactsList.filter({$0.name.localizedCaseInsensitiveContains(name)})
     }
 }
 
